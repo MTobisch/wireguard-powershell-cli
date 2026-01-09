@@ -18,11 +18,15 @@ It features the following operations:
 | Create empty config | `WgCli.ps1 -new INTERFACE_NAME` |
 | Delete config | `WgCli.ps1 -delete INTERFACE_NAME` |
 
-## Prerequisites
-To use this tool, the following must be true:
-1. The [Windows Wireguard Client](https://www.wireguard.com/install/) must be installed first.
+## Installation
+Simply download this repository with into a folder of your choice, for example with:
+
+`git clone https://github.com/MTobisch/wireguard-powershell-cli.git`
+
+To then use this tool, the following must be true:
+1. The [Windows Wireguard Client](https://www.wireguard.com/install/) must be installed.
 2. It must be called from an elevated Powershell session (admin rights)
-3. Since it is a plain unsigned script, the current Powershell execution policy must allow it to run. This can be accomplished either by calling it like `powershell -ExecutionPolicy Bypass .\WgCli.ps1` or by disabling security checks in general via `Set-ExecutionPolicy Bypass -Scope CurrentUser` after which it works with just `./WgCli.ps1`.
+3. Since it is a plain script, the current Powershell execution policy must allow it to run. This can be accomplished either by calling it like `powershell -ExecutionPolicy Bypass .\WgCli.ps1` or by disabling security checks in general via `Set-ExecutionPolicy Bypass -Scope CurrentUser` after which it works with just `./WgCli.ps1`.
 
 ## Configuration
 The root dir has a `Config.psm1` file, which contains some variables like folder paths that can be adjusted, if needed. This is entirely optional and shouldn't be necessary, though.
