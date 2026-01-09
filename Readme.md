@@ -1,7 +1,7 @@
 # Wireguard Powershell CLI
 This is a simple Powershell CLI for managing Wireguard connections after installing the [Windows Wireguard Client](https://www.wireguard.com/install/). 
 
-It offers improved ease-of-use when compared to the standard `wg` command, such as the ability the handle `wg-quick`-style configuration files (much like the Wireguard UI) and more.
+It offers improved ease-of-use when compared to the standard `wg` command, such as the ability the handle `wg-quick`-style configuration files (the same as the Wireguard UI) and more.
 
 It features the following operations:
 
@@ -39,7 +39,7 @@ To then update that connection later on, its easiest to just use the `-import` o
 **Note:** The new configuration is **not** immediately applied if it is currently running as an active tunnel. To apply the changes, you need to manually restart the tunnel (for example via the `-restart` operation).
 
 ## Running commands over SSH
-For remote maintenance purposes, it is often desirable to update Wireguard configurations from afar. This can be a problem as its easy to saw off the branch that you're sitting on when the SSH connection itself connects via the very Wireguard tunnel that you're tying to edit.
+For remote maintenance purposes, it is often desirable to update Wireguard configurations from afar. This can be a problem as its easy to saw off the branch you're sitting on when the SSH connection itself connects via the very Wireguard tunnel that you're tying to edit.
 
-For this purpose, some operations that close the Wireguard tunnel (temporarily) like `-restart` or `-rename` have "disconnect-protection" built-in and are run as background tasks. This means that while the SSH connection will inevitably disconnect, the command itself will not cancel, proceed to finish normally and start the tunnel again. You can then simply reestablish the SSH connections shortly afterwards.
+For this purpose, some operations that close the Wireguard tunnel (temporarily) like `-restart` or `-rename` have "disconnect-protection" built-in and are run as background tasks. This means that while the SSH connection will inevitably disconnect, the command itself will not cancel, but proceed to finish normally and start the tunnel again. You can then simply reestablish the SSH connections shortly afterwards.
 
