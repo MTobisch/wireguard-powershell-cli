@@ -43,3 +43,6 @@ For remote maintenance purposes, it is often desirable to update Wireguard confi
 
 For this purpose, some operations that close the Wireguard tunnel (temporarily) like `-restart` or `-rename` have "disconnect-protection" built-in and are run as background tasks. This means that while the SSH connection will inevitably disconnect, the command itself will not cancel, but proceed to finish normally and start the tunnel again. You can then simply reestablish the SSH connections shortly afterwards.
 
+## Limitations
+This project is not meant to be a full implementation of all wg-quick features, but is instead intended to help alleviate some of the most common everyday pains and shortcomings when trying to manage Wireguard connections in Windows via the CLI. As such, the tool has not been tested with more advanced configurations.
+
