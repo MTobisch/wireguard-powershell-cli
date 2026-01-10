@@ -46,16 +46,16 @@ if ($operationCount -eq 0) {
 This tools allows easy management of Wireguard connections in Windows via an elevated CLI.
 
 Usage:
-- List all available configs        WgCli.ps1 -list
-- Activate config:                  WgCli.ps1 -up INTERFACE_NAME
-- Deactivate config:                WgCli.ps1 -down INTERFACE_NAME
-- Restart active config:            WgCli.ps1 -restart
-- Print active config:              WgCli.ps1 -print
-- Rename active config:             WgCli.ps1 -rename NEW_INTERFACE_NAME
-- Backup active config:             WgCli.ps1 -backup
-- Import config:                    WgCli.ps1 -import CONFIG_FILE
-- Create empty config:              WgCli.ps1 -new INTERFACE_NAME
-- Delete config:                    WgCli.ps1 -delete INTERFACE_NAME
+- List all tunnels          WgCli.ps1 -list
+- Activate tunnel:          WgCli.ps1 -up TUNNEL_NAME
+- Deactivate tunnel:        WgCli.ps1 -down TUNNEL_NAME
+- Restart active tunnel:    WgCli.ps1 -restart
+- Print active tunnel:      WgCli.ps1 -print
+- Rename active tunnel:     WgCli.ps1 -rename NEW_TUNNEL_NAME
+- Backup active tunnel:     WgCli.ps1 -backup
+- Import tunnel:            WgCli.ps1 -import CONFIG_FILE
+- Create empty tunnel:      WgCli.ps1 -new TUNNEL_NAME
+- Delete tunnel:            WgCli.ps1 -delete TUNNEL_NAME
 
 "@
 
