@@ -19,7 +19,7 @@ It features the following operations:
 | Delete tunnel | `WgCli.ps1 -delete TUNNEL_NAME` |
 
 ## Installation
-Simply download this repository with into a folder of your choice, for example with:
+Simply download this repository into a folder of your choice, for example with:
 
 `git clone https://github.com/MTobisch/wireguard-powershell-cli.git`
 
