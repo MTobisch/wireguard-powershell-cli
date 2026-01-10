@@ -23,10 +23,11 @@ Simply download this repository into a folder of your choice, for example with:
 
 `git clone https://github.com/MTobisch/wireguard-powershell-cli.git`
 
-To then use this tool, the following must be true:
+Also make sure following is true:
 1. The [Windows Wireguard Client](https://www.wireguard.com/install/) must be installed.
-2. It must be called from an elevated Powershell session (admin rights)
-3. Since it is a plain script, the current Powershell execution policy must allow it to run. This can be accomplished either by calling it like `powershell -ExecutionPolicy Bypass .\WgCli.ps1` or by disabling security checks in general via `Set-ExecutionPolicy Bypass -Scope CurrentUser` after which it works with just `./WgCli.ps1`.
+2. Since it is a plain script, the current Powershell execution policy must allow it to run. This can be accomplished either by always calling it like `powershell -ExecutionPolicy Bypass ./WgCli.ps1` or by disabling execution policy checks in general via `Set-ExecutionPolicy Bypass -Scope CurrentUser`.
+
+You can then open up an elevated Powershell session with admin rights in the same folder (right-click, then Ctrl + Shift + "Open in Terminal") and start using the tool like `./WgCli.ps1`.
 
 ## Configuration
 The root dir has a `Config.psm1` file, which contains some variables like folder paths that can be adjusted, if needed. This is entirely optional and shouldn't be necessary, though.
